@@ -19,7 +19,12 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-
+        stage('Manual Approval') {
+            steps {
+                input 'Apply Terraform?'
+            }
+        }
+         
         stage('Terraform Apply') {
             steps {
                 sh 'terraform apply --auto-approve'

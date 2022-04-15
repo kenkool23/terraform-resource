@@ -30,8 +30,8 @@ resource "aws_security_group" "terra_sg" {
 
   ingress {
     description      = "Custom sg2"
-    from_port        = 9000
-    to_port          = 9000
+    from_port        = 9090
+    to_port          = 9090
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
