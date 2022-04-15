@@ -50,6 +50,3 @@ resource "aws_security_group" "terra_sg" {
 }
 
 # Database ...
-module "my_db" {
-  source = "./database"
-}
